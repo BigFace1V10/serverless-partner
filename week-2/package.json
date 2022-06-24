@@ -1,0 +1,18 @@
+{
+  "name": "week-2",
+  "version": "1.0.0",
+  "description": "Your tool from last week was hit! With the new information we gathered from our missions, we've discovered some intel we can use to infiltrate the Bad Apple's main base.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "install": "^0.13.0",
+    "node-fetch": "^2.6.7",
+    "npm": "^8.13.1",
+    "rot13-cipher": "^1.0.0"
+  }
+}
