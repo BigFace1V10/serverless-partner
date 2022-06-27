@@ -13,20 +13,17 @@ module.exports = async function (context, req) {
     context.log(respJson);
 
     let secretCode = respJson['secret'];
-    let code = rot13Cipher(secretCode);
-    context.log(code);
+    let cipherCode = rot13Cipher(secretCode);
+    context.log(cipherCode);
 
-
-    resp = await fetch("https://badapples.herokuapp.com/api/unlock", {
+    resp2 = await fetch("https://b4d4ppl3s.herokuapp.com/api/unlock", {
         method: 'POST',
-        body: {
-            'code' : code
-        }
+        body: JSON.stringify({'code': cipherCode})
     })
-    context.log(resp);
-    respJson = await resp.json();
-    context.log(respJson);
-    let key = respJson['key'];
+    context.log(resp2);
+    resp2Json = await resp2.json();
+    context.log(resp2Json);
+    let key = resp2Json['key'];
  
     context.res = {
         // status: 200, /* Defaults to 200 */
